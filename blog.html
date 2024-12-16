@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-</head>
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"></head>
 <body>
     <body>
         <header>
-            <nav>
+            <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">logo her</a> </li>
-                    <li><a href="kollektion.html">kollektion</a></li>
-                    <li><a href="om.html">om os</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li class="nav-column">
+                        <a href="index.html">
+                            <div class="logolottiefile">
+                                <dotlottie-player 
+                                    src="https://lottie.host/0b024f4c-6762-4682-b276-d825bc309a45/81X0SOzzDP.lottie"
+                                    autoplay
+                                    loop>
+                                </dotlottie-player>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-column"><a href="kollektion.html">kollektion</a></li>
+                    <li class="nav-column"><a href="om.html">om os</a></li>
+                    <li class="nav-column"><a href="blog.html">blog</a></li>
                 </ul>
             </nav>
         </header>
+        
     <main>
         <h1>FRA JORD TIL SKABELSE</h1>
 
