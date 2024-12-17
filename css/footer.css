@@ -1,0 +1,106 @@
+/* Generel styling for footer */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Sørg for korrekt beregning af width */
+  font-family: "Jakarta";
+}
+
+@font-face {
+  font-family: "Jakarta";
+  src: url("./font/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
+  src: url("./font/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+footer {
+  background-image: url("img/kollektion/tekstur5.png"); /* Sti til din teksturfil */
+  background-color: #ae907b; /* Baggrundsfarve som på billedet */
+  font-family: "Jakarta"; /* Skrifttype */
+  padding: 20px 40px; /* Indvendig afstand */
+  margin: 0;
+  padding: 3%;
+}
+
+h4 {
+  padding-bottom: 30px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+h5 {
+  padding-bottom: 30px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.gap {
+  padding-bottom: 40px;
+}
+
+footer p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.icon {
+  height: 100%;
+  width: 15%;
+  padding-right: 20px;
+}
+
+.footer_4 {
+  padding-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Gør elementerne til en kolonne */
+  gap: 10px; /* Tilføj afstand mellem elementerne */
+  max-width: 400px; /* Begræns formens bredde */
+}
+
+h5 {
+  font-weight: 400;
+}
+
+@media (width >= 700px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 700px; /* Begræns formens bredde */
+  }
+  label {
+    flex-direction: row;
+    display: inline-block; /* Sørger for at label kun fylder det nødvendige */
+  }
+
+  .navn {
+    width: 100px;
+  }
+
+  .mail {
+    width: 60px;
+  }
+
+  .icon {
+    height: 100%;
+    width: 100px;
+    padding-right: 40px;
+  }
+
+  h5 {
+    padding-bottom: 30px;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+}
