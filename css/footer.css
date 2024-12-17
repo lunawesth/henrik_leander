@@ -1,9 +1,15 @@
 /* Generel styling for footer */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Sørg for korrekt beregning af width */
   font-family: "Jakarta";
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @font-face {
@@ -45,6 +51,15 @@ footer p {
   font-weight: 400;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
 .icon {
   height: 100%;
   width: 15%;
@@ -94,7 +109,7 @@ h5 {
 
   .icon {
     height: 100%;
-    width: 100px;
+    width: 10vw;
     padding-right: 40px;
   }
 
