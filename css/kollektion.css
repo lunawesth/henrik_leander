@@ -1,0 +1,123 @@
+.price {
+  font-weight: 600;
+  padding-bottom: 40px;
+}
+
+h1 {
+  font-size: 7vw;
+  font-weight: 350;
+  padding-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+.image_section {
+  position: relative; /* Sætter en referenceramme til absolut positionering */
+  width: 100%; /* Sørger for, at billedet fylder hele bredden */
+
+  overflow: hidden; /* Sikrer, at intet går ud over billedrammen */
+}
+
+.image_section img {
+  display: block; /* Fjerner ekstra mellemrum under billedet */
+  width: 100%; /* Fylder hele bredden */
+  height: auto; /* Bevarer billedets proportioner */
+}
+
+.text_overlay {
+  position: absolute; /* Absolut position inde i .image_section */
+  bottom: 10%; /* Justerer placeringen nedefra (20% op fra bunden) */
+  left: 1%; /* Justerer placeringen fra venstre side */
+  font-size: 12vw; /* Størrelse på teksten */
+  font-weight: 400; /* Gør teksten fed */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Let skygge for bedre kontrast */
+  margin: 0; /* Fjern standard margin */
+}
+
+.lined-text {
+  position: relative; /* Gør det muligt at positionere pseudo-elementerne */
+  margin: 50px 0;
+}
+
+.lined-text::before,
+.lined-text::after {
+  content: ""; /* Påkrævet for pseudo-elementer */
+  position: absolute;
+  width: 80%; /* Bestem længden på stregerne (tilpas efter behov) */
+  height: 1px; /* Tykkelse af stregen */
+  background-color: black; /* Farven på stregen */
+  left: 10%; /* Centrerer stregerne med plads i begge sider */
+}
+
+.lined-text::before {
+  top: -20px; /* Placer stregen over teksten */
+  left: 0;
+}
+
+.lined-text::after {
+  bottom: -30px; /* Placer stregen under teksten */
+  right: 0;
+  width: 90%; /* Stregen går hele vejen til højre */
+}
+
+.lined-text p {
+  font-size: 5.5vw; /* Tilpas tekstens størrelse */
+  font-weight: 300;
+}
+
+.grid-container {
+  display: grid; /* Aktiver CSS Grid */
+  grid-template-columns: 1fr 1fr; /* To kolonner af samme bredde */
+  gap: 5px; /* Afstand mellem rækker og kolonner */
+  margin-bottom: 40px; /* Afstand under produktgruppen */
+  max-width: 100%;
+  box-sizing: border-box; /* Inkluder padding og border i dimensioner */
+}
+
+.grid-container img {
+  width: 100%; /* Billedet fylder containerens bredde */
+  height: 100%; /* Billedet fylder containerens højde */
+  object-fit: cover; /* Bevarer proportioner og beskærer billedet */
+}
+
+.item img {
+  width: 100%; /* Sørg for, at billeder fylder containeren */
+  height: auto; /* Bevar proportionerne */
+}
+
+p {
+  font-size: 3vw;
+  padding-bottom: 5px;
+}
+
+@media (width >= 700px) {
+  .grid-container {
+    display: grid; /* Aktiver CSS Grid */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* To kolonner af samme bredde */
+    gap: 5px; /* Afstand mellem rækker og kolonner */
+    margin-bottom: 40px; /* Afstand under produktgruppen */
+    max-width: 100%;
+    box-sizing: border-box; /* Inkluder padding og border i dimensioner */
+  }
+  p {
+    font-size: 1rem;
+  }
+  .grid-container img {
+    width: 100%; /* Billedet fylder containerens bredde */
+    height: 100%; /* Billedet fylder containerens højde */
+    object-fit: cover; /* Bevarer proportioner og beskærer billedet */
+    display: block; /* Fjerner ekstra mellemrum under billedet */
+  }
+  h1 {
+    padding-top: 50px;
+    font-size: 4vw;
+  }
+
+  .item {
+    padding-bottom: 50px;
+  }
+}
