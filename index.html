@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forside</title>
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
     <header>
@@ -15,25 +16,101 @@
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
-        <!-- billede her -->
-        <h1>HENRIK LEANDER</h1>
-        <a href="kollektion.html">kollektion</a>
+
+    <section class="hero_section">
+       
+        <img class="slides active" src="../img/forside1.webp" alt="Billede 1">
+        <img class="slides" src="../img/hero.webp" alt="Billede 2">
+        <img class="slides" src="../img/lågkrukker.webp" alt="Billede 3">
+
+        
+        <div class="overskrift"> <h1>HENRIK <br> LEANDER</h1></div>
+        <a class="kollektion_link" href="kollektion.html">Kollektion →</a> 
+    
+        
+        <div class="dot-container">
+            <div class="dot active" onclick="currentSlide(0)"></div>
+            <div class="dot" onclick="currentSlide(1)"></div>
+            <div class="dot" onclick="currentSlide(2)"></div>
+        </div>
+        
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelectorAll(".slides");
+            const dots = document.querySelectorAll(".dot");
+    
+            function showSlide(index) {
+                
+                slides.forEach(slide => slide.classList.remove("active"));
+                dots.forEach(dot => dot.classList.remove("active"));
+    
+                slides[index].classList.add("active");
+                dots[index].classList.add("active");
+    
+                currentIndex = index; 
+            }
+    
+            function autoSlide() {
+                currentIndex = (currentIndex + 1) % slides.length; 
+                showSlide(currentIndex);
+                setTimeout(autoSlide, 4000); 
+            }
+    
+            function currentSlide(index) {
+                showSlide(index);
+            }
+    
+            setTimeout(autoSlide, 4000);
+        </script>
+
+    </section>
     </header>
     <main>
-        <h2>"Autentisk håndværk, tidløst design."</h2>
+
+        <!DOCTYPE html>
+<html lang="da">
+<head>
+
+
+
+        <div class="text-with-lines">
+        <h2>"Autentisk håndværk, tidsløst design."</h2>
+        </div>
+
+
         <section class="billeder_6_forside">
-            <!-- billede her -->
-            <a href="kollektion.html">Lågkrukker</a>
-            <!-- billede her -->
-            <a href="kollektion.html">Vaser</a>
-            <!-- billede her -->
-            <a href="kollektion.html">Kopper</a>
-            <!-- billede her -->
-            <a href="kollektion.html">"Grib"</a>
-            <!-- billede her -->
-            <a href="kollektion.html">Skåle</a>
-            <!-- billede her -->
-            <a href="kollektion.html">Tallerkener</a>
+            
+            <div class="forside_galleri">
+            <img src="../img/låg.webp">
+            <a class="text_overlay" href="kollektion.html">Lågkrukker</a>
+            </div>
+
+            <div class="forside_galleri">
+            <img src="../img/vaser.webp">
+            <a class="text_overlay" href="kollektion.html">Vaser</a>
+            </div>
+
+            <div class="forside_galleri">
+            <img src="../img/kopper.webp">
+            <a class="text_overlay" href="kollektion.html">Kopper</a>
+            </div>
+
+            <div class="forside_galleri">
+            <img src="../img/grib.webp">
+            <a class="text_overlay" href="kollektion.html">"Grib"</a>
+            </div>
+
+            <div class="forside_galleri">
+            <img src="../img/skåle.webp">
+            <a class="text_overlay" href="kollektion.html">Skåle</a>
+            </div>
+
+            <div class="forside_galleri">
+            <img src="../img/tallerkener.webp">
+            <a class="text_overlay" href="kollektion.html">Tallerkener</a>
+            </div>
+
+
         </section>
     </main>
     <footer>
@@ -57,6 +134,25 @@
     <div class="footer_3">
     <h4>Følg mig:</h4>
     </div>
+
+    <form>
+      
+        <label for="full-name">Fulde navn</label>
+        <input
+               id="full-name"
+               name="fname"
+               type="text">
+       
+        <label for="email">E-mail</label>
+        <input
+               id="email"
+               name="email"
+               type="email">
+        
+        <button>Indsend</button>
+        
+      </form>
+      
 
 </section>
     </footer>
