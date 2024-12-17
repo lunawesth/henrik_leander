@@ -37,7 +37,6 @@ h4 {
 }
 
 h5 {
-  padding-bottom: 30px;
   font-size: 1.7rem;
   font-weight: 600;
 }
@@ -61,8 +60,10 @@ h1 {
   padding: 0;
 }
 .icon {
-  height: 100%;
-  width: 15%;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
   padding-right: 20px;
 }
 
@@ -108,13 +109,15 @@ h5 {
   }
 
   .icon {
-    height: 100%;
-    width: 10vw;
+    width: 100px;
+    height: 100px;
+    margin-top: -20px;
+    object-fit: contain;
+    flex-shrink: 0;
     padding-right: 40px;
   }
 
   h5 {
-    padding-bottom: 30px;
     font-size: 1.7rem;
     font-weight: 400;
   }
