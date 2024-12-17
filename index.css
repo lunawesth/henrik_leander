@@ -1,4 +1,6 @@
-/* layout */
+body {
+  margin: 0;
+}
 
 .hero_section {
   display: flex;
@@ -22,7 +24,6 @@
   display: block;
 }
 
-/* Prikkerne (indicators) */
 .dot-container {
   position: absolute;
   top: 850px;
@@ -45,7 +46,7 @@
 }
 
 .overskrift {
-  top: 490px;
+  top: 530px;
   left: 30px;
   position: absolute;
   font-size: 50px;
@@ -63,10 +64,10 @@
 /* Containeren, der holder teksten */
 .text-with-lines {
   display: flex;
-  justify-content: center; /* Centrerer hele indholdet */
-  gap: 40px; /* Afstand mellem tekst og linjer */
-  font-size: 2rem; /* Størrelse på skriften */
-  font-weight: 200; /* Tykkelse af fonten */
+  justify-content: center;
+  gap: 40px;
+  font-size: 2rem;
+  font-weight: 200;
   position: relative;
   width: 100%;
   text-align: center;
@@ -85,9 +86,9 @@
 
 .text-with-lines::after {
   content: "";
-  flex: 5; /* Sørger for, at linjen fylder al ledig plads */
-  height: 2px; /* Tykkelsen på linjen */
-  background-color: black; /* Farven på linjen */
+  flex: 5;
+  height: 2px;
+  background-color: black;
   margin-bottom: 150px;
 }
 
@@ -127,5 +128,3 @@
     gap: 5px;
   }
 }
-
-/* style */
