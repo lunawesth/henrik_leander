@@ -1,0 +1,131 @@
+/* layout */
+
+.hero_section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: #f0e8db;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.slides {
+  display: none;
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.active {
+  display: block;
+}
+
+/* Prikkerne (indicators) */
+.dot-container {
+  position: absolute;
+  top: 850px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.overskrift {
+  top: 490px;
+  left: 30px;
+  position: absolute;
+  font-size: 50px;
+}
+
+.kollektion_link {
+  top: 800px;
+  left: 32px;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  font-size: 30px;
+}
+
+/* Containeren, der holder teksten */
+.text-with-lines {
+  display: flex;
+  justify-content: center; /* Centrerer hele indholdet */
+  gap: 40px; /* Afstand mellem tekst og linjer */
+  font-size: 2rem; /* Størrelse på skriften */
+  font-weight: 200; /* Tykkelse af fonten */
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Stregerne før og efter teksten */
+.text-with-lines::before {
+  content: "";
+  flex: 5;
+  height: 2px;
+  background-color: black;
+  margin-top: 150px;
+}
+
+.text-with-lines::after {
+  content: "";
+  flex: 5; /* Sørger for, at linjen fylder al ledig plads */
+  height: 2px; /* Tykkelsen på linjen */
+  background-color: black; /* Farven på linjen */
+  margin-bottom: 150px;
+}
+
+.billeder_6_forside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.forside_galleri {
+  position: relative;
+  width: 100%;
+}
+
+.forside_galleri img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.forside_galleri .text_overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: black;
+}
+
+.text_overlay {
+  text-decoration: none;
+  font-size: 250%;
+}
+
+@media (width >= 700px) {
+  .billeder_6_forside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+}
+
+/* style */
