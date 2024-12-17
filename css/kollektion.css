@@ -16,7 +16,6 @@ img {
 }
 
 .image_section {
-  position: relative; /* Sætter en referenceramme til absolut positionering */
   width: 100%; /* Sørger for, at billedet fylder hele bredden */
   margin: 0;
   height: auto;
@@ -93,6 +92,22 @@ img {
 p {
   font-size: 3vw;
   padding-bottom: 5px;
+}
+
+.image_section {
+  position: relative; /* Sørg for, at menuen positioneres i forhold til hero */
+  background-size: cover; /* Sørg for, at billedet fylder hele sektionen */
+  background-position: center;
+  z-index: -1;
+}
+
+.navbar {
+  position: absolute; /* Placér menuen ned på hero */
+  top: -3%; /* Flyt menuen længere ned */
+  left: 50%; /* Centrer menuen */
+  transform: translateX(-50%); /* Juster så den er midt på */
+  display: flex; /* Lægger menupunkterne i række */
+  gap: 30px;
 }
 
 @media (width >= 700px) {
