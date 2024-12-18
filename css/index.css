@@ -148,6 +148,7 @@ main {
 .text_overlay {
   text-decoration: none;
   font-size: 250%;
+  font-weight: 200;
 }
 
 @media (width >= 700px) {
