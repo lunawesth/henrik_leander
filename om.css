@@ -1,101 +1,9 @@
-.price {
-  font-weight: 600;
-  padding-bottom: 40px;
-}
-
-h1 {
-  font-size: 7vw;
-  font-weight: 350;
-  padding-bottom: 10px;
-}
-
 img {
-  width: 100%;
-  height: auto;
-  padding-bottom: 10px;
-}
-
-.image_section {
-  width: 100%; /* Sørger for, at billedet fylder hele bredden */
-  margin: 0;
-  height: auto;
-  overflow: hidden; /* Sikrer, at intet går ud over billedrammen */
-}
-
-.image_section img {
-  display: block; /* Fjerner ekstra mellemrum under billedet */
-  width: 100%; /* Fylder hele bredden */
-  height: auto; /* Bevarer billedets proportioner */
-}
-
-.text_overlay {
-  position: absolute; /* Absolut position inde i .image_section */
-  bottom: 10%; /* Justerer placeringen nedefra (20% op fra bunden) */
-  left: 0; /* Justerer placeringen fra venstre side */
-  font-size: 12vw; /* Størrelse på teksten */
-  font-weight: 300; /* Gør teksten fed */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Let skygge for bedre kontrast */
-  margin: 0; /* Fjern standard margin */
-}
-
-.lined-text {
-  position: relative; /* Gør det muligt at positionere pseudo-elementerne */
-  margin: 50px 0;
-}
-
-.lined-text::before,
-.lined-text::after {
-  content: ""; /* Påkrævet for pseudo-elementer */
-  position: absolute;
-  width: 80%; /* Bestem længden på stregerne (tilpas efter behov) */
-  height: 1px; /* Tykkelse af stregen */
-  background-color: black; /* Farven på stregen */
-  left: 10%; /* Centrerer stregerne med plads i begge sider */
-}
-
-.lined-text::before {
-  top: -20px; /* Placer stregen over teksten */
-  left: 0;
-}
-
-.lined-text::after {
-  bottom: -30px; /* Placer stregen under teksten */
-  right: 0;
-  width: 90%; /* Stregen går hele vejen til højre */
-}
-
-.lined-text p {
-  font-size: 5.5vw; /* Tilpas tekstens størrelse */
-  font-weight: 300;
-}
-
-.grid-container {
-  display: grid; /* Aktiver CSS Grid */
-  grid-template-columns: 1fr 1fr; /* To kolonner af samme bredde */
-  gap: 5px; /* Afstand mellem rækker og kolonner */
-  margin-bottom: 40px; /* Afstand under produktgruppen */
   max-width: 100%;
-  box-sizing: border-box; /* Inkluder padding og border i dimensioner */
+  height: auto;
 }
 
-.grid-container img {
-  width: 100%; /* Billedet fylder containerens bredde */
-  height: 100%; /* Billedet fylder containerens højde */
-  object-fit: cover; /* Bevarer proportioner og beskærer billedet */
-}
-
-.item img {
-  width: 100%; /* Sørg for, at billeder fylder containeren */
-  height: auto; /* Bevar proportionerne */
-}
-
-p {
-  font-size: 3vw;
-  padding-bottom: 5px;
-}
-
-.image_section {
-  position: relative; /* Sørg for, at menuen positioneres i forhold til hero */
+.hero-container {
   background-size: cover; /* Sørg for, at billedet fylder hele sektionen */
   background-position: center;
   z-index: -1;
@@ -103,37 +11,187 @@ p {
 
 .navbar {
   position: absolute; /* Placér menuen ned på hero */
-  top: -3%; /* Flyt menuen længere ned */
+  top: 0; /* Flyt menuen længere ned */
   left: 50%; /* Centrer menuen */
   transform: translateX(-50%); /* Juster så den er midt på */
   display: flex; /* Lægger menupunkterne i række */
   gap: 30px;
 }
 
+/* forside */
+.hero-container {
+  position: relative; /* Enables positioning child elements */
+  max-width: 100%; /* Limits the container width */
+  height: auto;
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio for image */
+  overflow: hidden; /* Hide overflow */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container */
+}
+
+.overlay-text {
+  position: absolute; /* Positions text relative to the container */
+  top: 50%; /* Centers vertically */
+  left: 20%; /* Centers horizontally */
+  text-align: left; /* Centers text horizontally */
+  color: white; /* Text color */
+  font-family: "Jakarta";
+}
+
+.overlay-text h1 {
+  font-size: 6vw; /* Adjust heading size */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: "Jakarta";
+}
+
+.overlay-text p {
+  font-size: 3vw;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-family: "Jakarta";
+}
+
+/* Mit design */
+
+.main-container {
+  position: relative;
+  max-width: 100%; /* Limits the container width */
+  height: auto;
+  margin: auto;
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio for image */
+}
+
+.overlay-text-1 {
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
+  position: absolute; /* Positions text relative to the container */
+  font-family: "Jakarta";
+  color: white; /* Text color */
+  font-size: 5vw;
+  padding-top: 35px;
+}
+
+.overlay-text-1 p {
+  font-family: "Jakarta";
+  color: black;
+  font-family: "Jakarta";
+}
+
+.text {
+  padding-left: -50px;
+  font-family: "Jakarta";
+}
+
+/* Button */
+.button-container {
+  position: center;
+}
+
+.collection-button {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: initial;
+}
+
+.collection-button:hover {
+  background-color: burlywood;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.krukker {
+  padding-top: 30px;
+}
+
+h2 {
+  font-size: 3.5em;
+  padding-left: 10px;
+}
+
+h3 {
+  font-size: 2em;
+  padding-left: 10px;
+}
+
+.galleri p {
+  font-size: 2em;
+  font-family: "Jakarta";
+}
+
+.om-tekst {
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.låg-tekst {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+
 @media (width >= 700px) {
-  .grid-container {
-    display: grid; /* Aktiver CSS Grid */
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* To kolonner af samme bredde */
-    gap: 5px; /* Afstand mellem rækker og kolonner */
-    margin-bottom: 40px; /* Afstand under produktgruppen */
-    max-width: 100%;
-    box-sizing: border-box; /* Inkluder padding og border i dimensioner */
-  }
-  p {
-    font-size: 1rem;
-  }
-  .grid-container img {
-    width: 100%; /* Billedet fylder containerens bredde */
-    height: 100%; /* Billedet fylder containerens højde */
-    object-fit: cover; /* Bevarer proportioner og beskærer billedet */
-    display: block; /* Fjerner ekstra mellemrum under billedet */
-  }
-  h1 {
-    padding-top: 50px;
-    font-size: 4vw;
+  .galleri {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
   }
 
-  .item {
-    padding-bottom: 50px;
+  .galleri item-1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
+
+  .galleri item-2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .galleri item-3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+
+  h2 {
+    font-size: 6em;
+  }
+
+  h3 {
+    font-size: 4em;
+    font-weight: 500;
+  }
+
+  .låg-tekst {
+    padding-top: 60px;
+  }
+}
+
+@font-face {
+  font-family: "Jakarta";
+  src: url("./font/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
+  src: url("./font/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
