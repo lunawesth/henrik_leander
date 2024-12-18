@@ -22,7 +22,7 @@ main {
 }
 
 footer {
-  background-image: url("img/kollektion/tekstur5.png"); /* Sti til din teksturfil */
+  background-image: url("/img/tekstur5.png"); /* Sti til din teksturfil */
   background-color: #ae907b; /* Baggrundsfarve som på billedet */
   font-family: "Jakarta"; /* Skrifttype */
   padding: 20px 40px; /* Indvendig afstand */
@@ -31,7 +31,7 @@ footer {
 }
 
 h4 {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: 1.7rem;
   font-weight: 600;
 }
@@ -86,6 +86,10 @@ h5 {
   .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer {
+    display: flex;
     justify-content: space-between;
   }
 
