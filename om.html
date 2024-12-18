@@ -3,49 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Om</title>
+    <link rel="stylesheet" href="om.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="navbar">
         <ul>
-          <li><a href="index.html">logo her</a></li>
-          <li><a href="kollektion.html">kollektion</a></li>
-          <li><a href="om.html">om os</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li class="nav-column">
+            <a href="index.html">
+              <div class="logolottiefile">
+                <dotlottie-player
+                  src="https://lottie.host/0b024f4c-6762-4682-b276-d825bc309a45/81X0SOzzDP.lottie"
+                  autoplay
+                  loop
+                >
+                </dotlottie-player>
+              </div>
+            </a>
+          </li>
+          <li class="nav-column"><a href="kollektion.html">kollektion</a></li>
+          <li class="nav-column"><a href="om.html">om os</a></li>
+          <li class="nav-column"><a href="blog.html">blog</a></li>
         </ul>
       </nav>
-      <!-- billeder kommer ind her -->
-      <h1>HENRIK LEANDER</h1>
+
+      <div class="hero-container">
+        <img
+          src="https://nikolajjuulportfolio.dk/SEM_01/TEMA_05/virksomhedssite/assets/img/forside.webp"
+          alt="forside"
+        />
+
+        <div class="overlay-text">
+          <h1>HENRIK</h1>
+          <h1>LEANDER</h1>
+          <p>Keramik fra København</p>
+        </div>
+      </div>
     </header>
+
     <main>
-      <h2>
-        "Mit design er en afspejling af naturens enkelhed og skønhed, med fokus
-        på funktionalitet og æstetik. Jeg finder inspiration i de rå materialer,
-        de organiske former og de små detaljer, der gør hver genstand unik."
-      </h2>
-      <a href="kollektion.html">Kollektion</a>
+      <div class="main-container">
+        <div class="overlay-text-1">
+          <p class="text">
+            “Mit design er en afspejling af naturens enkelhed og skønhed, med
+            fokus på funktionalitet og æstetik. Jeg finder inspiration i de rå
+            materialer, de organiske former og de små detaljer, der gør hver
+            genstand unik."
+          </p>
+          <div class="button-container">
+            <button class="collection-button">
+              <a href="kollektion.html">kollektion</a>
+            </button>
+          </div>
+        </div>
+      </div>
 
-      <!-- stort billede -->
+      <div class="krukker">
+        <img
+          src="https://nikolajjuulportfolio.dk/SEM_01/TEMA_05/virksomhedssite/assets/img/krukker.webp"
+          alt="krukker"
+        />
+      </div>
 
-      <section>
-        <h2>Om keramikken</h2>
-        <p>Unikke designs til hverdagen</p>
-        <p>
-          For mig handler keramik om at skabe smukke og funktionelle stykker med
-          personlighed. Jeg finder inspiration i naturens former og arbejder med
-          enkle designs, hvor tekstur og glasur giver hvert stykke liv. Hver
-          potte er en fortælling - en balance mellem æstetik og funktion, der
-          bringer glæde i hverdagen.
-        </p>
-      </section>
-      <section>
-        <p>
-          Jeg skaber keramik med fokus på æstetik og funktion, inspireret af
-          naturens former, teksturer og enkle, organiske designs.
-        </p>
-        <!-- Billede  -->
-        <!-- Billede -->
+      <h2>OM KERAMIKKEN</h2>
+
+      <section class="galleri">
+        <div class="item-1">
+          <h3>Unikke designs til hverdagen</h3>
+          <p class="om-tekst">
+            For mig handler keramik om at skabe smukke og funktionelle stykker
+            med personlighed. Jeg finder inspiration i naturens former og
+            arbejder med enkle designs, hvor tekstur og glasur giver hvert
+            stykke liv. Hver potte er en fortælling – en balance mellem æstetik
+            og funktion, der bringer glæde i hverdagen.
+          </p>
+        </div>
+        <div class="item-2">
+          <img
+            src="https://nikolajjuulportfolio.dk/SEM_01/TEMA_05/virksomhedssite/assets/img/laag.webp"
+            alt="billede af laag"
+          />
+          <p class="låg-tekst">
+            Jeg skaber keramik med fokus på æstetik og funktion, inspireret af
+            naturens former, teksturer og enkle, organiske designs.
+          </p>
+        </div>
+
+        <div class="item-3">
+          <img
+            src="https://nikolajjuulportfolio.dk/SEM_01/TEMA_05/virksomhedssite/assets/img/grib.webp"
+            alt="billede af krukker med grib"
+          />
+        </div>
       </section>
     </main>
 
@@ -55,18 +111,49 @@
           <h4>Henrik Leander</h4>
           <p>Kigkurren 8D, kl.</p>
           <p>2300 København S,</p>
-          <p>Danmark</p>
+          <p class="gap">Danmark</p>
         </div>
         <div class="footer_2">
           <h4>Åbningstider</h4>
           <p>Hverdage / 09.00-17.00</p>
           <p>Lørdag / Lukket</p>
-          <p>Søndag / Lukket</p>
+          <p class="gap">Søndag / Lukket</p>
         </div>
         <div class="footer_3">
           <h4>Følg mig:</h4>
+          <p>
+            <a href="https://www.instagram.com/henrikleander/" target="_blank">
+              <img
+                src="img/kollektion/insta.svg"
+                alt="Instagram"
+                class="icon"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/henrik.leander/?locale=da_DK"
+              target="_blank"
+            >
+              <img
+                src="img/kollektion/facebook.svg"
+                alt="Facebook"
+                class="icon"
+              />
+            </a>
+          </p>
         </div>
       </section>
+      <div class="footer_4">
+        <h5>Tilmeld dig nyhedsbrevet</h5>
+        <form>
+          <label class="navn" for="full-name">Fulde navn</label>
+          <input id="full-name" name="fname" type="text" />
+
+          <label class="mail" for="email">E-mail</label>
+          <input id="email" name="email" type="email" />
+
+          <button>Indsend</button>
+        </form>
+      </div>
     </footer>
   </body>
 </html>
