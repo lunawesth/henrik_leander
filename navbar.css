@@ -26,6 +26,33 @@
     letter-spacing: 1px; /* Adds refined spacing between letters */
 }
 
+.navbar ul li a {
+    position: relative; /* Required for underline effect */
+    text-decoration: none; /* Removes default underline */
+    color:#000; /* Default text color */
+    
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar ul li a:hover {
+    color: #8B4513; /* Brown color on hover */
+}
+
+/* Underline Effect */
+.navbar ul li a::after {
+    content: ""; /* Empty content for the line */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Position below the text */
+    width: 0; /* Initially no width */
+    height: 2px; /* Thickness of the line */
+    background-color: #3C2929; /* Brown color for the line */
+    transition: width 0.3s ease; /* Smooth expand transition */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* Expands to full width on hover */
+}
 
 /* Logo Container */
 .logolottiefile {
@@ -58,6 +85,5 @@
         margin-right: auto; /* Align logo to the far left */
     }
 
-    /* Header Spacing */
 
 }
