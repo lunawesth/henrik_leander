@@ -1,94 +1,87 @@
 /* Reset default styles */
 * {
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif; /* Set font globally */
-    font-optical-sizing: auto;
-    list-style: none;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  list-style: none;
 }
 
 /* Navbar Styling */
 .navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    white-space: nowrap; /* Prevent wrapping */
-    text-align: center; /* Centers text */
-    padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap; /* Prevent wrapping */
+  text-align: center; /* Centers text */
+  padding: 15px;
 }
 
 .navbar a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #000;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-    letter-spacing: 1px; /* Adds refined spacing between letters */
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  letter-spacing: 1px; /* Adds refined spacing between letters */
 }
 
 .navbar ul li a {
-    position: relative; /* Required for underline effect */
-    text-decoration: none; /* Removes default underline */
-    color:#000; /* Default text color */
-    
-    transition: color 0.3s ease; /* Smooth color transition */
-}
+  position: relative; /* Required for underline effect */
+  text-decoration: none; /* Removes default underline */
+  color: #000; /* Default text color */
 
-.navbar ul li a:hover {
-    color: #3C2929; /* Brown color on hover */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 /* Underline Effect */
 .navbar ul li a::after {
-    content: ""; /* Empty content for the line */
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Position below the text */
-    width: 0; /* Initially no width */
-    height: 2px; /* Thickness of the line */
-    background-color: #3C2929; /* Brown color for the line */
-    transition: width 0.3s ease; /* Smooth expand transition */
+  content: ""; /* Empty content for the line */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position below the text */
+  width: 0; /* Initially no width */
+  height: 2px; /* Thickness of the line */
+  background-color: #3c2929; /* Brown color for the line */
+  transition: width 0.3s ease; /* Smooth expand transition */
+}
+
+/* Apply hover effect only for the links except the logo */
+.navbar ul li:not(.logolottiefile) a:hover::after {
+  width: 100%; /* Expands the line width on hover */
 }
 
 .navbar .logolottiefile a::after {
-    display: none;
+  display: none;
 }
 
-
 .navbar ul li a:hover::after {
-    width: 100%; /* Expands to full width on hover */
+  width: 100%; /* Expands to full width on hover */
 }
 
 /* Logo Container */
 .logolottiefile {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    background-color: #3C2929;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  background-color: #3c2929;
 }
 
 .logolottiefile dotlottie-player {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-
-
 @media (min-width: 700px) {
-    .navbar ul {
-        gap: clamp(30px, 8vw, 150px); /* Adjust gap based on screen width */
-    }
+  .navbar ul {
+    gap: clamp(30px, 8vw, 150px); /* Adjust gap based on screen width */
+  }
 
-
-
-    /* Logo Adjustments */
-    .logolottiefile {
-        width: 120px; /* Larger logo size */
-        height: 120px;
-        margin-right: auto; /* Align logo to the far left */
-    }
-
-
+  /* Logo Adjustments */
+  .logolottiefile {
+    width: 120px; /* Larger logo size */
+    height: 120px;
+    margin-right: auto; /* Align logo to the far left */
+  }
 }
