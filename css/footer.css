@@ -7,11 +7,6 @@ body {
   margin: 0;
 }
 
-main {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 @font-face {
   font-family: "Jakarta";
   src: url("/font/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
