@@ -29,7 +29,8 @@
 .navbar ul li a {
     position: relative; /* Required for underline effect */
     text-decoration: none; /* Removes default underline */
-    color: #333; /* Default text color */
+    color:#000; /* Default text color */
+    
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
