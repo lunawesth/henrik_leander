@@ -1,14 +1,22 @@
 body {
   line-height: 1.6;
+  font-family: "Jakarta";
 }
 
 main {
-  padding: 3em;
+  font-family: "Jakarta";
+  padding: 2em;
+}
+
+p,
+a {
+  font-family: "Jakarta";
 }
 
 h1,
 h2 {
-  font-weight: 500;
+  font-family: "Jakarta";
+  font-weight: 200;
   text-align: center;
   margin: 20px 0;
   font-size: 30px;
@@ -99,13 +107,9 @@ h1.title {
   object-fit: cover;
   object-position: center;
 }
-
 @media (width <= 700px) {
-  main {
-    margin: 1em;
-  }
+  main {padding-top: 0;}
 }
-
 @media (width >= 700px) {
   main {
     max-width: 1200px;
@@ -114,6 +118,7 @@ h1.title {
   h1 {
     font-size: clamp(4rem, 1.5vw, 6rem);
     line-height: 1.6;
+    padding-top: 2em;
   }
 
   img {
@@ -129,6 +134,10 @@ h1.title {
     white-space: normal; /* Allows text to wrap */
     word-wrap: break-word; /* Breaks long words to avoid overflow */
     overflow-wrap: break-word; /* Ensures compatibility */
+  }
+
+  .three-photos {
+    max-width: 1200px;
   }
 
   .blog_section1 {
@@ -204,4 +213,13 @@ h1.title {
     border-radius: 5px;
     margin-top: 6em;
   }
+}
+
+@font-face {
+  font-family: "Jakarta";
+  src: url("./font/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
+  src: url("./font/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }

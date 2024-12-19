@@ -1,165 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forside</title>
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="navbar.css" />
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <link rel="icon" href="assets/favicon-16x16.png" type="image/x-icon">
-    
-</head>
-<body>
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/x-icon" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <ul>
-                <li class="nav-column">
-                    <a href="index.html">
-                        <div class="logolottiefile">
-                            <dotlottie-player 
-                                src="https://lottie.host/0b024f4c-6762-4682-b276-d825bc309a45/81X0SOzzDP.lottie"
-                                autoplay
-                                loop>
-                            </dotlottie-player>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-column"><a href="kollektion.html">kollektion</a></li>
-                <li class="nav-column"><a href="om.html">om os</a></li>
-                <li class="nav-column"><a href="blog.html">blog</a></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <ul>
+          <li class="nav-column">
+            <a href="index.html">
+              <div class="logolottiefile">
+                <dotlottie-player src="https://lottie.host/0b024f4c-6762-4682-b276-d825bc309a45/81X0SOzzDP.lottie" autoplay loop> </dotlottie-player>
+              </div>
+            </a>
+          </li>
+          <li class="nav-column"><a href="kollektion.html">kollektion</a></li>
+          <li class="nav-column"><a href="om.html">om os</a></li>
+          <li class="nav-column"><a href="blog.html">blog</a></li>
+        </ul>
+      </nav>
 
-    <section class="hero_section">
-       
-        <img class="slides active" src="img/forside1.webp" alt="Billede 1">
-        <img class="slides" src="img/forside2.webp" alt="Billede 2">
-        <img class="slides" src="img/forside3.webp" alt="Billede 3">
+      <section class="hero_section">
+        <img class="slides active" src="img/forside1.webp" alt="Billede 1" />
+        <img class="slides" src="img/forside2.webp" alt="Billede 2" />
+        <img class="slides" src="img/forside3.webp" alt="Billede 3" />
 
-        
-        <div class="overskrift"> <h1>HENRIK <br> LEANDER</h1></div>
-        <a class="kollektion_link" href="kollektion.html">Kollektion →</a> 
-    
-        
+        <div class="overskrift">
+          <h1>
+            HENRIK <br />
+            LEANDER
+          </h1>
+        </div>
+        <a class="kollektion_link" href="kollektion.html">Kollektion →</a>
+
         <div class="dot-container">
-            <div class="dot active" onclick="currentSlide(0)"></div>
-            <div class="dot" onclick="currentSlide(1)"></div>
-            <div class="dot" onclick="currentSlide(2)"></div>
+          <div class="dot active" onclick="currentSlide(0)"></div>
+          <div class="dot" onclick="currentSlide(1)"></div>
+          <div class="dot" onclick="currentSlide(2)"></div>
         </div>
-        
+
         <script>
-            let currentIndex = 0;
-            const slides = document.querySelectorAll(".slides");
-            const dots = document.querySelectorAll(".dot");
-    
-            function showSlide(index) {
-                
-                slides.forEach(slide => slide.classList.remove("active"));
-                dots.forEach(dot => dot.classList.remove("active"));
-    
-                slides[index].classList.add("active");
-                dots[index].classList.add("active");
-    
-                currentIndex = index; 
-            }
-    
-            function autoSlide() {
-                currentIndex = (currentIndex + 1) % slides.length; 
-                showSlide(currentIndex);
-                setTimeout(autoSlide, 4000); 
-            }
-    
-            function currentSlide(index) {
-                showSlide(index);
-            }
-    
+          let currentIndex = 0;
+          const slides = document.querySelectorAll(".slides");
+          const dots = document.querySelectorAll(".dot");
+
+          function showSlide(index) {
+            slides.forEach((slide) => slide.classList.remove("active"));
+            dots.forEach((dot) => dot.classList.remove("active"));
+
+            slides[index].classList.add("active");
+            dots[index].classList.add("active");
+
+            currentIndex = index;
+          }
+
+          function autoSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
             setTimeout(autoSlide, 4000);
+          }
+
+          function currentSlide(index) {
+            showSlide(index);
+          }
+
+          setTimeout(autoSlide, 4000);
         </script>
+      </section>
 
-    </section>
-
-        <div class="lined-text">
+      <div class="lined-text">
         <p>Autentisk håndværk, tidsløst design.</p>
+      </div>
+    </header>
+    <main>
+      <section class="billeder_6_forside">
+        <div class="forside_galleri">
+          <a href="kollektion.html"> <img src="img/lågkrukker(2).webp" /></a>
+          <a class="text_overlay" href="kollektion.html">Lågkrukker</a>
         </div>
 
-</header>
-    <main>
-        <section class="billeder_6_forside">
-            
-            <div class="forside_galleri">
-                <a href="kollektion.html"> <img src="img/lågkrukker(2).webp"></a>
-            <a class="text_overlay" href="kollektion.html">Lågkrukker</a>
-            </div>
+        <div class="forside_galleri">
+          <a href="kollektion.html"> <img src="img/vaser(1).webp" /></a>
+          <a class="text_overlay" href="kollektion.html">Vaser</a>
+        </div>
 
-            <div class="forside_galleri">
-                <a href="kollektion.html"> <img src="img/vaser(1).webp"></a>
-            <a class="text_overlay" href="kollektion.html">Vaser</a>
-            </div>
+        <div class="forside_galleri">
+          <a href="kollektion.html"> <img src="img/kopper.webp" /></a>
+          <a class="text_overlay" href="kollektion.html">Kopper</a>
+        </div>
 
-            <div class="forside_galleri">
-                <a href="kollektion.html"> <img src="img/kopper.webp"></a>
-            <a class="text_overlay" href="kollektion.html">Kopper</a>
-            </div>
+        <div class="forside_galleri">
+          <a href="kollektion.html"> <img src="img/grib.webp" /></a>
+          <a class="text_overlay" href="kollektion.html">"Grib"</a>
+        </div>
 
-            <div class="forside_galleri">
-                <a href="kollektion.html"> <img src="img/grib.webp"></a>
-            <a class="text_overlay" href="kollektion.html">"Grib"</a>
-            </div>
+        <div class="forside_galleri">
+          <a href="kollektion.html"> <img src="img/skåle(1).webp" /></a>
+          <a class="text_overlay" href="kollektion.html">Skåle</a>
+        </div>
 
-            <div class="forside_galleri">
-                <a href="kollektion.html"> <img src="img/skåle(1).webp"></a>
-            <a class="text_overlay" href="kollektion.html">Skåle</a>
-            </div>
-
-            <div class="forside_galleri">
-                <a href="kollektion.html"> <img src="img/tallerkener.webp"></a>
-            <a class="text_overlay" href="kollektion.html">Tallerkener</a>
-            </div>
-
-
-        </section>
+        <div class="forside_galleri">
+          <a href="kollektion.html"> <img src="img/tallerkener.webp" /></a>
+          <a class="text_overlay" href="kollektion.html">Tallerkener</a>
+        </div>
+      </section>
     </main>
     <footer>
-        <section class="footer">
-            <div class="footer_1">
-              <h4>Henrik Leander</h4>
-              <p>Kigkurren 8D, kl.</p>
-              <p>2300 København S,</p>
-              <p class="gap">Danmark</p>
-            </div>
-            <div class="footer_2">
-              <h4>Åbningstider</h4>
-              <p>Hverdage / 09.00-17.00</p>
-              <p>Lørdag / Lukket</p>
-              <p class="gap">Søndag / Lukket</p>
-            </div>
-            <div class="footer_3">
-              <h4>Følg mig:</h4>
-              <p>
-                <a href="https://www.instagram.com/henrikleander/" target="_blank">
-                  <img src="img/insta.svg" alt="Instagram" class="icon" />
-                </a>
-                <a href="https://www.facebook.com/henrik.leander/?locale=da_DK" target="_blank">
-                  <img src="img/facebook.svg" alt="Facebook" class="icon" />
-                </a>
-              </p>
-            </div>
-          </section>
-          <div class="footer_4">
-            <h5>Tilmeld dig nyhedsbrevet</h5>
-            <form>
-              <label class="navn" for="full-name">Fulde navn</label>
-              <input id="full-name" name="fname" type="text" />
-    
-              <label class="mail" for="email">E-mail</label>
-              <input id="email" name="email" type="email" />
-    
-              <button>Indsend</button>
-            </form>
-          </div>
+      <section class="footer">
+        <div class="footer_1">
+          <h4>Henrik Leander</h4>
+          <p>Kigkurren 8D, kl.</p>
+          <p>2300 København S,</p>
+          <p class="gap">Danmark</p>
+        </div>
+        <div class="footer_2">
+          <h4>Åbningstider</h4>
+          <p>Hverdage / 09.00-17.00</p>
+          <p>Lørdag / Lukket</p>
+          <p class="gap">Søndag / Lukket</p>
+        </div>
+        <div class="footer_3">
+          <h4>Følg mig:</h4>
+          <p>
+            <a href="https://www.instagram.com/henrikleander/" target="_blank">
+              <img src="img/insta.svg" alt="Instagram" class="icon" />
+            </a>
+            <a href="https://www.facebook.com/henrik.leander/?locale=da_DK" target="_blank">
+              <img src="img/facebook.svg" alt="Facebook" class="icon" />
+            </a>
+          </p>
+        </div>
+      </section>
+      <div class="footer_4">
+        <h5>Tilmeld dig nyhedsbrevet</h5>
+        <form>
+          <label class="navn" for="full-name">Fulde navn</label>
+          <input id="full-name" name="fname" type="text" />
+
+          <label class="mail" for="email">E-mail</label>
+          <input id="email" name="email" type="email" />
+
+          <button>Indsend</button>
+        </form>
+      </div>
     </footer>
     <script src="login.js"></script>
-</body>
+  </body>
 </html>

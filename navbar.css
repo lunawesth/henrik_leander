@@ -1,4 +1,5 @@
 /* Reset default styles */
+
 * {
   box-sizing: border-box;
   font-optical-sizing: auto;
@@ -25,40 +26,37 @@
   letter-spacing: 1px; /* Adds refined spacing between letters */
 }
 
-.navbar ul li a {
+/* Base Styles for Navigation Links */
+.navbar ul li.nav-column a {
   position: relative; /* Required for underline effect */
   text-decoration: none; /* Removes default underline */
-  color: #000; /* Default text color */
-
+  color: #333; /* Default text color */
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
-/* Underline Effect */
-.navbar ul li a::after {
+/* Hover Effect for Non-Logo Links */
+.navbar ul li.nav-column:not(:first-child) a:hover {
+  color: #3c2929; /* Brown color on hover */
+}
+
+/* Underline Effect for Non-Logo Links */
+.navbar ul li.nav-column:not(:first-child) a::after {
   content: ""; /* Empty content for the line */
   position: absolute;
   left: 0;
   bottom: -2px; /* Position below the text */
   width: 0; /* Initially no width */
   height: 2px; /* Thickness of the line */
-  background-color: #3c2929; /* Brown color for the line */
+  background-color: #8b4513; /* Brown color for the line */
   transition: width 0.3s ease; /* Smooth expand transition */
 }
 
-/* Apply hover effect only for the links except the logo */
-.navbar ul li:not(.logolottiefile) a:hover::after {
-  width: 100%; /* Expands the line width on hover */
-}
-
-.navbar .logolottiefile a::after {
-  display: none;
-}
-
-.navbar ul li a:hover::after {
+/* Expand the Underline on Hover for Non-Logo Links */
+.navbar ul li.nav-column:not(:first-child) a:hover::after {
   width: 100%; /* Expands to full width on hover */
 }
 
-/* Logo Container */
+
 .logolottiefile {
   width: 80px;
   height: 80px;
