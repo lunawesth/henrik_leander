@@ -1,18 +1,15 @@
 @font-face {
   font-family: "Jakarta";
-  src: url("./font/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
-  src: url("./font/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  src: url("../font/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
+  src: url("../font/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-* {
-  font-family: "Jakarta";
-}
-
 body {
   margin: 0;
+  font-family: "Jakarta";
 }
 
 header {
@@ -100,6 +97,7 @@ main {
   text-decoration: none;
   position: absolute;
   font-size: 30px;
+  font-family: "Jakarta";
 }
 
 .lined-text {
