@@ -84,14 +84,14 @@ img {
 }
 
 .text {
-  padding-left: -50px;
+  padding-left: 50px;
   font-family: "Jakarta";
 }
 
-/* Button */
+/* Button
 .button-container {
   position: center;
-}
+} */
 
 .collection-button {
   background-color: transparent;
