@@ -108,7 +108,9 @@ h1.title {
   object-position: center;
 }
 @media (width <= 700px) {
-  main {padding-top: 0;}
+  main {
+    padding-top: 0;
+  }
 }
 @media (width >= 700px) {
   main {
@@ -138,6 +140,8 @@ h1.title {
 
   .three-photos {
     max-width: 1200px;
+    width: 95vw;
+    height: auto;
   }
 
   .blog_section1 {
