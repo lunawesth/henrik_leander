@@ -6,12 +6,14 @@
 main {
   padding-left: 10px;
   padding-right: 10px;
+  font-family: "Jakarta";
 }
 
 h1 {
   font-size: 7vw;
   font-weight: 350;
   padding-bottom: 10px;
+  font-family: "Jakarta";
 }
 
 img {
@@ -97,6 +99,7 @@ img {
 p {
   font-size: 3vw;
   padding-bottom: 5px;
+  font-family: "Jakarta";
 }
 
 .image_section {
@@ -141,4 +144,13 @@ p {
   .item {
     padding-bottom: 50px;
   }
+}
+
+@font-face {
+  font-family: "Jakarta";
+  src: url("./font/PlusJakartaSans-VariableFont_wght.woff2") format("woff2");
+  src: url("./font/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
